@@ -1,0 +1,7 @@
+Gunakan database yang ada pada LMS untuk mengerjakan soal - soal berikut:
+1. Tampilkan data dari tabel invoice yang kolom totalnya lebih besar dari rata - rata total di kolom invoice.
+2. Tentukan berapa banyak customer di Canada yang memiliki SupportRepId 3, 4, atau 5.
+3. Tampilkan semua invoiceId yang memiliki total transaksi antara 5 hingga 10.
+4. Tampilkan semua negara dari tabel invoices yang rata - rata transaksinya diatas rata - rata transaksi di Brazil tetapi kurang dari rata-rata transaksi di USA.
+5. Hitung berapa banyak data yang tampil di soal nomor 4!
+6. Tampilkan semua data di tabel invoice yang memiliki transaksi antara 5 hingga 10 dan terletak di Canada.

@@ -1,0 +1,21 @@
+SELECT * FROM invoices WHERE Total > (SELECT AVG(Total) FROM invoices);
+
+SELECT COUNT(CustomerId) FROM customers 
+WHERE Country = 'Canada'
+AND SupportRepId IN (3,4,5);
+
+SELECT InvoiceId FROM invoices WHERE Total BETWEEN 5 AND 10;
+
+SELECT
+  BillingCountry
+FROM (SELECT AVG(Total) AS Average_Total , BillingCountry FROM invoices GROUP BY BillingCountry)
+WHERE Average_Total > (SELECT AVG(Total) FROM invoices WHERE BillingCountry = 'Brazil')
+AND Average_Total < (SELECT AVG(Total) FROM invoices WHERE BillingCountry = 'USA');
+
+SELECT COUNT(BillingCountry)
+FROM (SELECT AVG(Total) AS Average_Total , BillingCountry FROM invoices GROUP BY BillingCountry)
+WHERE Average_Total > (SELECT AVG(Total) FROM invoices WHERE BillingCountry = 'Brazil')
+AND Average_Total < (SELECT AVG(Total) FROM invoices WHERE BillingCountry = 'USA');
+
+SELECT * FROM invoices WHERE Total BETWEEN 5 AND 10
+AND BillingCountry = 'Canada';
